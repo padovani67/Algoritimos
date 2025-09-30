@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main(){
+
+float salario, salarioNovo, diferença;
+int codCargo;
+
+    printf("Digite o seu salário: ");
+    scanf("%f", &salario);
+    
+    printf("Digite seu código de cargo: ");
+    scanf("%d", &codCargo);
+    
+    if(codCargo==101){
+      salarioNovo = 1.05*salario;
+    }
+    else if (codCargo==202){
+        salarioNovo=1.08*salario;
+    } else if (codCargo==303){
+        salarioNovo=1.10*salario;
+    } else{
+        salarioNovo=1.02*salario;
+    }
+ diferença = salarioNovo-salario;
+ 
+ printf("o seu salario novo: %.2f \n", salarioNovo);
+ printf("o salario antigo: %.2f \n", salario);
+ printf("A diferença: %.2f \n",diferença);
+    
+}
